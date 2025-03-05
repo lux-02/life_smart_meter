@@ -1,0 +1,35 @@
+.gasMeter {
+  display: flex;
+  background: #000000;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.digitContainer {
+  width: clamp(30px, 8vw, 60px);
+  height: clamp(50px, 13vw, 100px);
+  overflow: hidden;
+  background: #000000;
+  border-radius: 5px;
+  position: relative;
+  border: 1px solid white;
+}
+
+.digit {
+  position: absolute;
+  width: 100%;
+  transition: transform 0.3s ease-out;
+}
+
+.number {
+  height: clamp(50px, 13vw, 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(24px, 6vw, 48px);
+  font-family: "Digital-7", monospace;
+  color: #ecf0f1;
+}
