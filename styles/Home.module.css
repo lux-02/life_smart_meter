@@ -187,31 +187,24 @@ a.secondary {
 }
 
 .input {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
+  padding: clamp(0.5rem, 2vw, 0.8rem) 1rem;
+  font-size: clamp(1rem, 3vw, 1.2rem);
   border: none;
   border-radius: 5px;
+  width: 100%;
+  max-width: 200px;
   text-align: center;
   margin-top: 3rem;
   color: #222;
   background-color: #000;
-  /* Chrome, Safari, Edge에서 달력 아이콘 제거 */
-  &::-webkit-calendar-picker-indicator {
-    display: none;
-  }
-  /* Firefox에서 달력 아이콘 제거 */
-  &::-webkit-inner-spin-button,
-  &::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-  /* 전체 브라우저에서 달력 아이콘 제거를 위한 추가 속성 */
-  appearance: textfield;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
 }
 
 .input:focus {
+  outline: none;
+  border-color: none;
+  box-shadow: 0 0 0 2px rgba(103, 103, 103, 0.2);
   color: white;
 }
 
@@ -233,7 +226,85 @@ a.secondary {
 .error {
   color: #e74c3c;
   margin-bottom: 1rem;
-  margin-top: 2rem;
+
   text-align: center;
   font-weight: bold;
+  margin-top: 0.5rem;
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
+}
+
+.introSection {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.readmeContent {
+  margin: 2rem 0;
+  text-align: left;
+  line-height: 1.8;
+  color: #777;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
+
+.readmeContent p {
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.readmeContent p:last-child {
+  margin-bottom: 0;
+}
+
+.inputSection {
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.inputSection.counterMode {
+  margin-top: 2rem;
+}
+
+.inputContainer {
+  margin-bottom: clamp(1rem, 5vw, 2rem);
+  text-align: center;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+/* 모바일 최적화 */
+@media screen and (max-width: 480px) {
+  .readmeContent {
+    font-size: 0.9rem;
+    padding: 0 0.5rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+}
+
+/* 태블릿 최적화 */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .readmeContent {
+    padding: 0 1rem;
+  }
+}
+
+/* 가로 모드 대응 */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .container {
+    padding: 1rem;
+  }
+
+  .introSection {
+    margin: 1rem auto;
+  }
+
+  .readmeContent {
+    margin: 1rem 0;
+  }
 }

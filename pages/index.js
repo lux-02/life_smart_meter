@@ -77,18 +77,47 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      {isValid && <GasMeter birthDate={birthDate} />}
-      <div className={styles.inputContainer}>
-        <input
-          type="text"
-          value={dateInput}
-          onChange={handleInputChange}
-          placeholder="YYYYMMDD"
-          className={styles.input}
-          maxLength="10"
-        />
-        {error && <p className={styles.error}>{error}</p>}
+      {!isValid && (
+        <div className={styles.introSection}>
+          <div className={styles.readmeContent}>
+            <p>
+              Life is like a meter. The moment we are born, a sealed valve is
+              released, and the numbers begin to rise—quietly yet steadily, one
+              by one.
+            </p>
+            <p>
+              These numbers are not merely measures of time; they are the traces
+              of our journey, the evidence of our experiences, our joys, and our
+              sorrows.
+            </p>
+            <p>
+              The soaring numbers symbolize the unforeseen uncertainty of the
+              future. In the relentless flow of time, I embrace the knowledge
+              that my existence is etched into these ever-increasing digits.
+            </p>
+          </div>
+        </div>
+      )}
+
+      <div
+        className={`${styles.inputSection} ${
+          isValid ? styles.counterMode : ""
+        }`}
+      >
+        <div className={styles.inputContainer}>
+          <input
+            type="text"
+            value={dateInput}
+            onChange={handleInputChange}
+            placeholder="YYYYMMDD"
+            className={styles.input}
+            maxLength="10"
+          />
+          {error && <p className={styles.error}>{error}</p>}
+        </div>
       </div>
+
+      {isValid && <GasMeter birthDate={birthDate} />}
     </div>
   );
 }
