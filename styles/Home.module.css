@@ -189,10 +189,12 @@ a.secondary {
 .input {
   padding: 0.5rem 1rem;
   font-size: 1rem;
-  border: 2px solid #222;
+  border: none;
   border-radius: 5px;
   text-align: center;
-  margin-bottom: 1rem;
+  margin-top: 3rem;
+  color: #222;
+  background-color: #000;
   /* Chrome, Safari, Edge에서 달력 아이콘 제거 */
   &::-webkit-calendar-picker-indicator {
     display: none;
@@ -207,6 +209,10 @@ a.secondary {
   appearance: textfield;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
+}
+
+.input:focus {
+  color: white;
 }
 
 .button {

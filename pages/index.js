@@ -77,6 +77,7 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
+      {isValid && <GasMeter birthDate={birthDate} />}
       <div className={styles.inputContainer}>
         <input
           type="text"
@@ -88,8 +89,6 @@ export default function Home() {
         />
         {error && <p className={styles.error}>{error}</p>}
       </div>
-
-      {isValid && <GasMeter birthDate={birthDate} />}
     </div>
   );
 }
