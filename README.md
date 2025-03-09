@@ -1,10 +1,15 @@
 # Life Smart Meter
 
+![로고](/public/screenshots/lsm_ico.png)
+![로고](/public/screenshots/intro.png)
+
 This speaks of a life that shines amid the paradox of new beginnings and endings at every moment.
 
 Life is like a meter. The moment we are born, a sealed valve is released, and the numbers begin to rise—quietly
 yet steadily, one by one. These numbers are not merely measures of time; they are the traces of our journey,
 the evidence of our experiences, our joys, and our sorrows.
+
+![up](/public/screenshots/up.gif)
 
 The soaring numbers symbolize the unforeseen uncertainty of the future. In the relentless flow of time, I
 embrace the knowledge that my existence is etched into these ever-increasing digits, not knowing when it will
@@ -12,6 +17,9 @@ cease. Amid the numbers racing toward their final destination, I dream of the me
 endless possibilities it holds.
 
 ## 🌟 주요 기능
+
+![메인 화면](/public/screenshots/main.gif)
+![동적 수정](/public/screenshots/change.gif)
 
 ### 1. 실시간 시간 카운터
 
