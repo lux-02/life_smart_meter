@@ -80,6 +80,12 @@ export default function Home() {
       {!isValid && (
         <div className={styles.introSection}>
           <div className={styles.readmeContent}>
+            <div className={styles.logoBox}>
+              <img
+                className={styles.logoImg}
+                src="/screenshots/lsm_ico.png"
+              ></img>
+            </div>
             <p>
               Life is like a meter. The moment we are born, a sealed valve is
               released, and the numbers begin to rise—quietly yet steadily, one
